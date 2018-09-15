@@ -1,6 +1,4 @@
-#Type "copyright", "credits" or "license()" for more information.
 #stevemats
-#>>>
 import socket
 
 ##end of imports##
