@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 #Python 3.7. 
 import socket
 import sys
