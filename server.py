@@ -1,15 +1,11 @@
 #!/usr/bin/env python
-#stevemats
 import socket
-
-##end of imports##
-    ###init###
 
 s=socket.socket()
 host=socket.gethostname()
 print("server will start on host:",host)
 port=8080
-#make sure the port is not in use else use another
+# make sure the port is not in use
 s.bind((host,port))
 print("")
 print("server done binding on host and port successfully")
@@ -23,14 +19,13 @@ print("")
 #putting in a loop
 while 1:
             message = input(str(">>"))
-            #and ow we convert mes to bytes
-            #>> to showercase in terminal
+            # Now converting our message to bytes
             message = message.encode()
             conn.send(message)
             print("message successfully sent..")
             print("")
             incoming_message = conn.recv(1024)
-            #now decoding the message after reaching the >> end user
+            # decoding the bytes into readable output
             incoming_message = incoming_message.decode()
             print("client : ",incoming_message)
             print("") 
